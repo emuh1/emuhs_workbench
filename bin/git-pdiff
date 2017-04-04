@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Shows the diffs of the pending commits 
+
+git diff origin/master..HEAD

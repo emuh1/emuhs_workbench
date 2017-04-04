@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Shows the logs of the pending commits 
+
+git log origin/master..HEAD
