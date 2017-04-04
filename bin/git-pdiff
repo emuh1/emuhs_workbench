@@ -1,5 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-# Shows the diffs of the pending commits 
+source "$(git --exec-path)/git-sh-setup"
 
-git diff origin/master..HEAD
+USAGE="COMMITS"
+function _pdiff() {
+    git diff origin/master..HEAD
+}
+
+_pdiff "$@"

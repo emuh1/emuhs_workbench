@@ -1,5 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-# Shows the logs of the pending commits 
+source "$(git --exec-path)/git-sh-setup"
 
-git log origin/master..HEAD
+USAGE="COMMITS"
+function _pdiff() {
+    git log origin/master..HEAD
+}
+
+_pdiff "$@"
