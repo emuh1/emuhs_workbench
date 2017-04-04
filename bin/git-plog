@@ -1,0 +1,10 @@
+#!/bin/sh
+
+source "$(git --exec-path)/git-sh-setup"
+
+USAGE="COMMITS"
+function _pdiff() {
+    git log origin/master..HEAD
+}
+
+_pdiff "$@"
